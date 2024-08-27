@@ -16,6 +16,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(amb.root)
+
+        amb.abraBt.setOnClickListener {
+            
+        }
+
         Log.v(getString(R.string.app_name), "onCreate: Iniciando ciclo completo")
     }
 
