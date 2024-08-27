@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.ads.pdm.cdv
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -18,7 +19,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(amb.root)
 
         amb.abraBt.setOnClickListener {
-            
+            val anotherintent: Intent = Intent(this, AnotherActivity::class.java)
+            startActivity(anotherintent)
         }
 
         Log.v(getString(R.string.app_name), "onCreate: Iniciando ciclo completo")
