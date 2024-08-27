@@ -43,4 +43,9 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         Log.v(getString(R.string.app_name), "onDestroy: Finalizando ciclo completo")
     }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.v(getString(R.string.app_name), "onRestart: Preparando onStart")
+    }
 }
