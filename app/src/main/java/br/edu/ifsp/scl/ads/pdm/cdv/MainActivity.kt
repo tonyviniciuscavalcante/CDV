@@ -19,8 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(amb.root)
 
         amb.abraBt.setOnClickListener {
-            val anotherintent: Intent = Intent(this, AnotherActivity::class.java)
-            startActivity(anotherintent)
+            Intent(this, AnotherActivity::class.java).also {
+                startActivity(it)
+            }
         }
 
         Log.v(getString(R.string.app_name), "onCreate: Iniciando ciclo completo")
