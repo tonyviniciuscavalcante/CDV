@@ -18,4 +18,29 @@ class MainActivity : AppCompatActivity() {
         setContentView(amb.root)
         Log.v(getString(R.string.app_name), "onCreate: Iniciando ciclo completo")
     }
+
+    override fun onStart() {
+        super.onStart()
+        Log.v(getString(R.string.app_name), "onStart: Iniciando ciclo visível")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.v(getString(R.string.app_name), "onResume: Iniciando ciclo foreground")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.v(getString(R.string.app_name), "onPause: Finalizando ciclo foreground")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.v(getString(R.string.app_name), "onStop: Finalizando ciclo visível")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.v(getString(R.string.app_name), "onDestroy: Finalizando ciclo completo")
+    }
 }
